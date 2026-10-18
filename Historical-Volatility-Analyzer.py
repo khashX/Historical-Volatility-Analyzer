@@ -171,14 +171,14 @@ def main():
     r = historical_volatility(prices, args.days, args.trading_days)
 
     print("=" * 52)
-    print(f"فایل: {path}")
-    print(f"بازه: {r['start']:%Y-%m-%d} تا {r['end']:%Y-%m-%d} "
-          f"({r['n_prices']} قیمت، {r['n_returns']} بازده)")
-    print(f"قیمت ابتدا → انتها: {r['first_price']:,.0f} → {r['last_price']:,.0f}")
+    print(f"ّFile: {path}")
+    print(f"Gain: {r['start']:%Y-%m-%d} تا {r['end']:%Y-%m-%d} "
+          f"({r['n_prices']} Price، {r['n_returns']} Gain)")
+    print(f"Beginning Price → End: {r['first_price']:,.0f} → {r['last_price']:,.0f}")
     print("-" * 52)
-    print(f"نوسان روزانه (σ روزانه):   {r['daily'] * 100:.3f}%")
-    print(f"نوسان سالانه (√{r['ann_factor']} × σ):  {r['annual'] * 100:.2f}%")
-    print(f"بیشترین بازده روزانه: {r['max_up'] * 100:+.2f}%   کمترین: {r['max_down'] * 100:+.2f}%")
+    print(f"Daily Volatility (σ Daily):   {r['daily'] * 100:.3f}%")
+    print(f"Annual Volatility (√{r['ann_factor']} × σ):  {r['annual'] * 100:.2f}%")
+    print(f"Max. Daily Return: {r['max_up'] * 100:+.2f}%   Min: {r['max_down'] * 100:+.2f}%")
     print("=" * 52)
 
 
